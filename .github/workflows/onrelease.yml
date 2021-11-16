@@ -37,18 +37,18 @@ jobs:
 
       - name: Deploy the job
         run: |
-          dbx deploy --jobs=fashion-mnist-dataset-sample
+          dbx deploy --jobs=fashionMnistDataset-sample
 
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{{{ secrets.GITHUB_TOKEN }}}} # This token is provided by Actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions
         with:
-          tag_name: ${{{{ github.ref }}}}
-          release_name: Release ${{{{ github.ref }}}}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           body: |
-            Release for version ${{{{ github.ref }}}}.
+            Release for version ${{ github.ref }}.
           draft: false
           prerelease: false
 
