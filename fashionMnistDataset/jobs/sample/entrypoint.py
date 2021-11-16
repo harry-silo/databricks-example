@@ -1,4 +1,4 @@
-from fashion-mnist-dataset.common import Job
+from fashionMnistDataset.common import Job
 import mlflow
 
 class SampleJob(Job):
