@@ -1,5 +1,5 @@
 from setuptools import find_packages, setup
-from {{fashion-mnist-dataset.project_slug}} import __version__
+from fashion-mnist-dataset.project_slug import __version__
 
 setup(
     name="fashion-mnist-dataset.project_slug",
