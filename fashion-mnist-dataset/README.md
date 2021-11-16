@@ -1,4 +1,5 @@
-# {{cookiecutter.project_name}}
+# fashion-mnist-dataset
+
 
 This is a sample project for Databricks, generated via cookiecutter.
 
