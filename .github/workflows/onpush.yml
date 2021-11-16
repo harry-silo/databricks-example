@@ -40,13 +40,4 @@ jobs:
           echo "Launching unit tests"
           pytest tests/unit
 
-      - name: Deploy integration test
-        run: |
-          dbx deploy --jobs=fashion-mnist-dataset-project-sample-integration-test --files-only
-
-      - name: Run integration test
-        run: |
-          dbx launch --job=fashion-mnist-dataset-project-sample-integration-test --as-run-submit --trace
-
-
-
+     
