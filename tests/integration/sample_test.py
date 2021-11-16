@@ -1,6 +1,6 @@
 import unittest
 
-from fashion-mnist-dataset.jobs.sample.entrypoint import SampleJob
+from fashionMnistDataset.jobs.sample.entrypoint import SampleJob
 from uuid import uuid4
 from pyspark.dbutils import DBUtils  # noqa
 

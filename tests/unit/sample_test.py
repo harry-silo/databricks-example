@@ -3,7 +3,7 @@ import tempfile
 import os
 import shutil
 
-from fashion-mnist-dataset.jobs.sample.entrypoint import SampleJob
+from fashionMnistDataset.jobs.sample.entrypoint import SampleJob
 from pyspark.sql import SparkSession
 from unittest.mock import MagicMock
 
