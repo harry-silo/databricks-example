@@ -8,7 +8,7 @@ from pyspark.sql import SparkSession
 import sys
 
 
-# abstract class for jobs
+# abstract class for jobs generic class provider
 class Job(ABC):
 
     def __init__(self, spark=None, init_conf=None):
