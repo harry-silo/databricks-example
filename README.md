@@ -1,5 +1,4 @@
-# fashion-mnist-dataset
-
+# cicd-harry
 
 This is a sample project for Databricks, generated via cookiecutter.
 
@@ -26,13 +25,13 @@ pytest tests/unit --cov
 
 For an integration test on interactive cluster, use the following command:
 ```
-dbx execute --cluster-name=<name of interactive cluster> --job={{cookiecutter.project_name}}-sample-integration-test
+dbx execute --cluster-name=<name of interactive cluster> --job=cicd-harry-sample-integration-test
 ```
 
 For a test on an automated job cluster, deploy the job files and then launch:
 ```
-dbx deploy --jobs={{cookiecutter.project_name}}-sample-integration-test --files-only
-dbx launch --job={{cookiecutter.project_name}}-sample-integration-test --as-run-submit --trace
+dbx deploy --jobs=cicd-harry-sample-integration-test --files-only
+dbx launch --job=cicd-harry-sample-integration-test --as-run-submit --trace
 ```
 
 ## Interactive execution and development
@@ -94,7 +93,7 @@ Please set the following secrets or environment variables for your CI provider:
 ## Testing and releasing via CI pipeline
 
 - To trigger the CI pipeline, simply push your code to the repository. If CI provider is correctly set, it shall trigger the general testing pipeline
-- To trigger the release pipeline, get the current version from the `{{cookiecutter.project_slug}}/__init__.py` file and tag the current code version:
+- To trigger the release pipeline, get the current version from the `cicd_harry/__init__.py` file and tag the current code version:
 ```
 git tag -a v<your-project-version> -m "Release tag for version <your-project-version>"
 git push origin --tags

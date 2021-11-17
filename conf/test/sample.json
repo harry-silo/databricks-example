@@ -1,4 +1,4 @@
 {
   "output_format": "delta",
-  "output_path": "dbfs:/dbx/tmp/test/fashionMnistDataset"
+  "output_path": "dbfs:/dbx/tmp/test/cicd_harry"
 }

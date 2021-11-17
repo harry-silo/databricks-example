@@ -2,8 +2,8 @@
     "environments": {
         "default": {
             "profile": "DEFAULT",
-            "workspace_dir": "/Shared/dbx/projects/databricks-example",
-            "artifact_location": "dbfs:/dbx/databricks-example"
+            "workspace_dir": "/Shared/dbx/projects/cicd-harry",
+            "artifact_location": "dbfs:/dbx/cicd-harry"
         }
     }
 }
