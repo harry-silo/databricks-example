@@ -5,7 +5,7 @@ class SampleJob(Job):
 
     def train(self):
         print('alsdkjldasj')
-
+        mlflow.set_experiment('harry-cicd')
     def launch(self):
         self.logger.info("Launching sample job")
 
