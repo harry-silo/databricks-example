@@ -35,6 +35,6 @@ jobs:
           pip install -r unit-requirements.txt
           pip install -e .
 
-       - name: Deploy the job
+      - name: Deploy the job
         run: |
           dbx deploy --jobs=cicd-harry-sample
