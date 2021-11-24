@@ -1,0 +1,19 @@
+{
+    "default": {
+        "jobs": [
+            {
+                "name": "cicd-harry-sample",
+                "existing_cluster_id":"1117-091550-jeenrac", 
+                "libraries": [],
+                "max_retries": 0,
+                "spark_python_task": {
+                    "python_file": "sample_project/jobs/sample/entrypoint.py",
+                    "parameters": [
+                        "--conf-file",
+                        "conf/test/sample.json"
+                    ]
+                }
+            }
+        ]
+    }
+}

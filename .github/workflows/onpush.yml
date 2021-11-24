@@ -22,9 +22,9 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Set up Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.7.5
 
       - name: Install pip
         run: |
@@ -35,6 +35,16 @@ jobs:
           pip install -r unit-requirements.txt
           pip install -e .
 
-      - name: Deploy the job
+      - name: Run unit tests
         run: |
-          dbx deploy --jobs=cicd-harry-sample
+          echo "Launching unit tests"
+          pytest tests/unit
+
+      - name: Deploy notebooks
+        shell: bash
+        run: |
+          echo "Deploying python code"
+          databricks workspace import_dir --overwrite jobs/ /Shared/cicd_harry/jobs
+
+
+
