@@ -30,7 +30,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install databricks-cli
-          
+
       - name: Install dependencies and project in dev mode
         run: |
           pip install -e .
@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           echo "Deploying python code"
-          databricks workspace import_dir --overwrite jobs/ /Shared/cicd_harry/jobs
+          databricks workspace import_dir --overwrite cicd_harry/jobs/ /Shared/cicd_harry/jobs
 
 
 
