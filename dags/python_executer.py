@@ -35,7 +35,7 @@ from airflow import DAG
 from airflow.providers.databricks.operators.databricks import DatabricksSubmitRunOperator
 
 with DAG(
-    dag_id='example_databricks_operator',
+    dag_id='harry_python_dag',
     schedule_interval='@daily',
     start_date=datetime(2021, 1, 1),
     tags=['example'],
@@ -52,7 +52,7 @@ with DAG(
    
 
     # Example of using the JSON parameter to initialize the operator.
-    preprocess = DatabricksSubmitRunOperator(task_id='spark_python_task', 
+    preprocess = DatabricksSubmitRunOperator(task_id='spark_python_task_preprocess', 
                                                 new_cluster= new_cluster,
                                                 spark_python_task={
                                                     'python_file' :'dbfs:/Shared/cicd_harry/jobs/preprocess/preprocess.py'
@@ -60,7 +60,7 @@ with DAG(
                                                 )
     # [START howto_operator_databricks_json]
 
-    train = DatabricksSubmitRunOperator(task_id='spark_python_task', 
+    train = DatabricksSubmitRunOperator(task_id='spark_python_task_train', 
                                                 new_cluster= new_cluster,
                                                 spark_python_task={
                                                     'python_file' :'dbfs:/Shared/cicd_harry/jobs/train/train.py'
