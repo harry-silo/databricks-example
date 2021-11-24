@@ -32,13 +32,7 @@ jobs:
 
       - name: Install dependencies and project in dev mode
         run: |
-          pip install -r unit-requirements.txt
           pip install -e .
-
-      - name: Run unit tests
-        run: |
-          echo "Launching unit tests"
-          pytest tests/unit
 
       - name: Deploy notebooks
         shell: bash
