@@ -35,7 +35,7 @@ from airflow import DAG
 from airflow.providers.databricks.operators.databricks import DatabricksSubmitRunOperator
 
 with DAG(
-    dag_id='harry_python_dag_notebook',
+    dag_id='harry_pipeline_example',
     schedule_interval='@daily',
     start_date=datetime(2021, 1, 1),
     tags=['example'],
@@ -70,7 +70,7 @@ with DAG(
     }
     # [START howto_operator_databricks_json]
     # Example of using the JSON parameter to initialize the operator.
-    evaluate = DatabricksSubmitRunOperator(task_id='evaluate_task', json=evaluate_task_json)
+    train = DatabricksSubmitRunOperator(task_id='train_task', json=train_task_json)
  
     evaluate_task_json = {
         'new_cluster': new_cluster,
